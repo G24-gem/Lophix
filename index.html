@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lophix — Clothes & The Woman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#F9F5F0] text-[#1a1a1a] overflow-x-hidden">
+
+  <!-- CURSOR -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 px-8 md:px-16 flex items-center justify-between">
+    <a href="#" class="brand-logo text-2xl tracking-[0.3em] uppercase font-light" style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:#1a1a1a; letter-spacing:0.25em;">LOPHIX</a>
+    <div class="hidden md:flex items-center gap-10">
+      <a href="#about" class="nav-link jost text-xs tracking-[0.2em] uppercase">About</a>
+      <a href="#collections" class="nav-link jost text-xs tracking-[0.2em] uppercase">Collections</a>
+      <a href="#experience" class="nav-link jost text-xs tracking-[0.2em] uppercase">Experience</a>
+      <a href="#visit" class="nav-link jost text-xs tracking-[0.2em] uppercase">Visit Us</a>
+    </div>
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 z-50" aria-label="Menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#1a1a1a]">
+    <div class="flex flex-col items-center gap-8">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#collections" class="mobile-nav-link">Collections</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#visit" class="mobile-nav-link">Visit Us</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-section relative min-h-screen flex items-center overflow-hidden">
+    <div class="hero-bg-pattern absolute inset-0 opacity-5"></div>
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+    </div>
+
+    <div class="container mx-auto px-8 md:px-16 pt-28 pb-20 relative z-10">
+      <div class="grid md:grid-cols-12 gap-8 items-center min-h-[80vh]">
+        <div class="md:col-span-7 hero-text-block">
+          <div class="overflow-hidden mb-4">
+            <p class="hero-sub jost text-xs tracking-[0.4em] uppercase text-[#C9956B] animate-fade-up" style="animation-delay:0.2s">Since 2018 · Opebi, Lagos</p>
+          </div>
+          <div class="overflow-hidden">
+            <h1 class="hero-heading animate-fade-up" style="animation-delay:0.4s">
+              Clothes<br/><em>&amp; The</em><br/>Woman.
+            </h1>
+          </div>
+          <div class="overflow-hidden mt-6">
+            <p class="hero-body jost text-sm md:text-base leading-relaxed max-w-md text-[#666] animate-fade-up" style="animation-delay:0.6s">
+              Where premium global fashion meets the modern African woman. Curated for you, styled with intention.
+            </p>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-4 animate-fade-up" style="animation-delay:0.8s">
+            <a href="#collections" class="btn-primary jost text-xs tracking-[0.2em] uppercase">Explore Collection</a>
+            <a href="#visit" class="btn-ghost jost text-xs tracking-[0.2em] uppercase">Find Our Store</a>
+          </div>
+          <div class="mt-16 flex items-center gap-8 animate-fade-up" style="animation-delay:1s">
+            <div class="stat-item">
+              <span class="stat-number">4.9</span>
+              <span class="stat-label jost">Star Rating</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">6+</span>
+              <span class="stat-label jost">Years of Excellence</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label jost">Premium Brands</span>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-5 hero-image-block relative animate-fade-up" style="animation-delay:0.5s">
+          <div class="hero-card-outer">
+            <div class="hero-card">
+              <!-- Decorative fashion card with CSS art -->
+              <div class="hero-fashion-art">
+                <div class="mannequin-container">
+                  <div class="dress-silhouette"></div>
+                  <div class="dress-belt"></div>
+                  <div class="dress-detail-1"></div>
+                  <div class="dress-detail-2"></div>
+                </div>
+                <div class="fashion-label jost text-xs tracking-[0.3em] uppercase">New Arrivals</div>
+              </div>
+            </div>
+            <div class="hero-card-tag jost text-xs tracking-[0.15em]">✦ Clothes &amp; The Woman</div>
+          </div>
+          <div class="floating-badge">
+            <span class="badge-text jost">Opebi<br/>Lagos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="jost text-[10px] tracking-[0.3em] uppercase text-[#999]">Scroll</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip py-4 overflow-hidden border-y border-[#E0D5CC]">
+    <div class="marquee-track flex gap-12 items-center">
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Premium Fashion</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Clothes &amp; The Woman</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Opebi, Lagos</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Global Brands</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Curated for You</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Premium Fashion</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Clothes &amp; The Woman</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Opebi, Lagos</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Global Brands</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item jost text-xs tracking-[0.3em] uppercase whitespace-nowrap">Curated for You</span>
+      <span class="marquee-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-32 px-8 md:px-16 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <div class="about-visual-block reveal-left">
+        <div class="about-artwork">
+          <div class="about-photo-frame">
+            <div class="photo-inner">
+              <div class="store-illustration">
+                <div class="store-window">
+                  <div class="store-sign jost text-xs tracking-widest uppercase">Lophix</div>
+                  <div class="store-mannequins">
+                    <div class="sm-figure sm-figure-1"></div>
+                    <div class="sm-figure sm-figure-2"></div>
+                    <div class="sm-figure sm-figure-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-accent-card">
+            <div class="accent-rating">
+              <div class="stars">★★★★★</div>
+              <p class="jost text-xs text-[#999] mt-1">31+ Happy Clients</p>
+            </div>
+          </div>
+          <div class="about-year-badge">
+            <span class="year-text">EST.</span>
+            <span class="year-num">2018</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal-right">
+        <p class="section-label jost text-xs tracking-[0.4em] uppercase text-[#C9956B] mb-6">Our Story</p>
+        <h2 class="section-heading mb-8">More Than a <em>Boutique</em></h2>
+        <p class="body-text mb-6">
+          Lophix was born from a simple belief: every woman deserves to feel extraordinary. Nestled in the heart of Opebi, Ikeja, we've been Lagos' most trusted destination for premium women's fashion since 2018.
+        </p>
+        <p class="body-text mb-8">
+          From international designer labels to carefully curated ready-to-wear, our collection speaks to the multifaceted modern woman — professional, elegant, bold, and always beautifully herself.
+        </p>
+        <div class="about-pillars grid grid-cols-2 gap-6 mt-10">
+          <div class="pillar-card">
+            <div class="pillar-icon">◈</div>
+            <h4 class="pillar-title jost">Curated Selection</h4>
+            <p class="pillar-desc jost text-xs">Only the finest global brands grace our racks</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">◈</div>
+            <h4 class="pillar-title jost">Personal Styling</h4>
+            <p class="pillar-desc jost text-xs">Expert stylists dedicated to your look</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">◈</div>
+            <h4 class="pillar-title jost">Premium Quality</h4>
+            <p class="pillar-desc jost text-xs">Fashion that lasts, crafted to perfection</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">◈</div>
+            <h4 class="pillar-title jost">Warm Service</h4>
+            <p class="pillar-desc jost text-xs">An experience as beautiful as our clothes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section id="collections" class="py-24 px-8 md:px-16 bg-[#1a1a1a] relative overflow-hidden">
+    <div class="collections-bg-pattern absolute inset-0 opacity-5"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-20 reveal-up">
+        <p class="section-label jost text-xs tracking-[0.4em] uppercase text-[#C9956B] mb-4">What We Offer</p>
+        <h2 class="section-heading text-white mb-4">Our <em>Collections</em></h2>
+        <p class="jost text-sm text-[#999] max-w-md mx-auto">Discover fashion that moves with you — from daily elegance to statement occasions.</p>
+      </div>
+
+      <div class="collections-grid">
+        <div class="collection-card reveal-up" style="animation-delay:0.1s">
+          <div class="collection-visual collection-v1">
+            <div class="collection-dress-art">
+              <div class="cd-silhouette cd-wrap"></div>
+            </div>
+          </div>
+          <div class="collection-info">
+            <span class="coll-num jost">01</span>
+            <h3 class="coll-title">Ready-to-Wear</h3>
+            <p class="coll-desc jost text-xs">Effortless pieces for every day, every mood</p>
+            <div class="coll-arrow">→</div>
+          </div>
+        </div>
+        <div class="collection-card reveal-up" style="animation-delay:0.2s">
+          <div class="collection-visual collection-v2">
+            <div class="collection-dress-art">
+              <div class="cd-silhouette cd-gown"></div>
+            </div>
+          </div>
+          <div class="collection-info">
+            <span class="coll-num jost">02</span>
+            <h3 class="coll-title">Evening & Occasion</h3>
+            <p class="coll-desc jost text-xs">Dress to be remembered at every event</p>
+            <div class="coll-arrow">→</div>
+          </div>
+        </div>
+        <div class="collection-card collection-card-wide reveal-up" style="animation-delay:0.3s">
+          <div class="collection-visual collection-v3">
+            <div class="collection-dress-art">
+              <div class="cd-silhouette cd-coord"></div>
+            </div>
+          </div>
+          <div class="collection-info">
+            <span class="coll-num jost">03</span>
+            <h3 class="coll-title">Shoes & Accessories</h3>
+            <p class="coll-desc jost text-xs">Complete the look with curated footwear & accessories</p>
+            <div class="coll-arrow">→</div>
+          </div>
+        </div>
+        <div class="collection-card reveal-up" style="animation-delay:0.4s">
+          <div class="collection-visual collection-v4">
+            <div class="collection-dress-art">
+              <div class="cd-silhouette cd-corporate"></div>
+            </div>
+          </div>
+          <div class="collection-info">
+            <span class="coll-num jost">04</span>
+            <h3 class="coll-title">Corporate Wear</h3>
+            <p class="coll-desc jost text-xs">Power dressing for the modern professional</p>
+            <div class="coll-arrow">→</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / TESTIMONIALS -->
+  <section id="experience" class="py-32 px-8 md:px-16 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20 reveal-up">
+        <p class="section-label jost text-xs tracking-[0.4em] uppercase text-[#C9956B] mb-4">Client Love</p>
+        <h2 class="section-heading mb-4">The Lophix <em>Experience</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal-up" style="animation-delay:0.1s">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text jost">Enjoyed my shopping, nice customer service. They really understand style and always have something special for me.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <p class="author-name jost text-xs font-medium tracking-widest uppercase">Verified Customer</p>
+              <div class="author-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" style="animation-delay:0.2s">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text jost">Reputable store for top clothing and beauty global brands. Lophix is simply the best boutique in Lagos.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">B</div>
+            <div>
+              <p class="author-name jost text-xs font-medium tracking-widest uppercase">Verified Customer</p>
+              <div class="author-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" style="animation-delay:0.3s">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text jost">Great customer service and a friendly environment. Good quality clothes that are worth every naira.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">C</div>
+            <div>
+              <p class="author-name jost text-xs font-medium tracking-widest uppercase">Verified Customer</p>
+              <div class="author-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating summary -->
+      <div class="rating-summary reveal-up mt-20">
+        <div class="rating-big">4.9</div>
+        <div class="rating-details">
+          <div class="rating-stars-big">★★★★★</div>
+          <p class="jost text-sm text-[#999]">Based on 31+ Google reviews</p>
+          <p class="jost text-xs text-[#C9956B] mt-2 tracking-widest uppercase">Opebi's Most Loved Boutique</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" class="py-24 px-8 md:px-16 bg-[#F0EBE3] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <div class="reveal-left">
+        <p class="section-label jost text-xs tracking-[0.4em] uppercase text-[#C9956B] mb-6">Find Us</p>
+        <h2 class="section-heading mb-8">Come Visit <em>Us</em></h2>
+        <div class="visit-info-block mb-6">
+          <div class="visit-icon">◎</div>
+          <div>
+            <p class="jost text-xs tracking-widest uppercase text-[#999] mb-1">Address</p>
+            <p class="jost text-sm font-medium">77 Opebi Road, Opebi,<br/>Ikeja 100281, Lagos, Nigeria</p>
+          </div>
+        </div>
+        <div class="visit-info-block mb-6">
+          <div class="visit-icon">◷</div>
+          <div>
+            <p class="jost text-xs tracking-widest uppercase text-[#999] mb-1">Opening Hours</p>
+            <p class="jost text-sm font-medium">Mon – Fri: 8:30 AM – 6:30 PM</p>
+            <p class="jost text-sm font-medium">Saturday: 9:00 AM – 6:00 PM</p>
+            <p class="jost text-sm text-[#999]">Sunday: Closed</p>
+          </div>
+        </div>
+        <div class="visit-info-block">
+          <div class="visit-icon">✦</div>
+          <div>
+            <p class="jost text-xs tracking-widest uppercase text-[#999] mb-1">Rating</p>
+            <p class="jost text-sm font-medium">4.9 ★ on Google Maps</p>
+            <p class="jost text-xs text-[#999]">31+ verified reviews</p>
+          </div>
+        </div>
+        <div class="mt-10">
+          <a href="https://maps.google.com/?q=77+Opebi+Road+Ikeja+Lagos" target="_blank" class="btn-primary jost text-xs tracking-[0.2em] uppercase">Get Directions</a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="map-visual">
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.3629!3d6.5877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93256f4489df%3A0x696aca4b51997561!2sLophix%20Boutique!5e0!3m2!1sen!2sng!4v1708000000000"
+              width="100%" height="400"
+              style="border:0; border-radius:4px; filter: sepia(20%) contrast(90%);"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="map-label jost text-xs tracking-widest uppercase">Lophix Boutique · Opebi, Lagos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-section py-32 px-8 text-center relative overflow-hidden">
+    <div class="cta-bg-art"></div>
+    <div class="relative z-10 reveal-up">
+      <p class="jost text-xs tracking-[0.4em] uppercase text-[#C9956B] mb-6">Your Style Awaits</p>
+      <h2 class="cta-heading mb-6">Dress Like You <em>Mean It.</em></h2>
+      <p class="jost text-sm text-[#999] max-w-md mx-auto mb-10">Step into Lophix and discover fashion that was made for you. Exceptional service, premium brands, unforgettable style.</p>
+      <a href="#visit" class="btn-primary jost text-xs tracking-[0.2em] uppercase">Visit the Store</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#111] text-white py-16 px-8 md:px-16">
+    <div class="max-w-7xl mx-auto">
+      <div class="footer-top grid md:grid-cols-3 gap-12 mb-16">
+        <div>
+          <h3 class="footer-brand mb-4">LOPHIX</h3>
+          <p class="jost text-xs text-[#666] leading-relaxed max-w-xs">Clothes &amp; The Woman. Premium fashion for the modern Lagos woman, curated with love since 2018.</p>
+        </div>
+        <div>
+          <p class="jost text-xs tracking-widest uppercase text-[#444] mb-6">Navigate</p>
+          <div class="flex flex-col gap-3">
+            <a href="#about" class="footer-link jost text-sm">About Us</a>
+            <a href="#collections" class="footer-link jost text-sm">Collections</a>
+            <a href="#experience" class="footer-link jost text-sm">Client Stories</a>
+            <a href="#visit" class="footer-link jost text-sm">Visit Us</a>
+          </div>
+        </div>
+        <div>
+          <p class="jost text-xs tracking-widest uppercase text-[#444] mb-6">Connect</p>
+          <div class="flex flex-col gap-3">
+            <a href="https://maps.google.com/?q=77+Opebi+Road+Ikeja+Lagos" target="_blank" class="footer-link jost text-sm">Google Maps</a>
+            <p class="jost text-sm text-[#555]">77 Opebi Rd, Ikeja</p>
+            <p class="jost text-sm text-[#555]">Lagos, Nigeria</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom border-t border-[#222] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="jost text-xs text-[#444]">© 2024 Lophix Boutique. All rights reserved.</p>
+        <p class="jost text-xs text-[#333]">Clothes &amp; The Woman ✦ Opebi, Lagos</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
